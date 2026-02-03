@@ -48,5 +48,7 @@ export class MovieCardComponent {
     this.movieService.deleteMovie(this.movie.id);
     this.delete.emit();
   }
-
+  toggleWatched() {
+    this.isWatched = !this.isWatched;
+  }
 }

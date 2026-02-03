@@ -2,7 +2,7 @@
   <div class="movie-poster-container">
     <img [src]="movie.image" alt="{{ movie.title }}" class="movie-poster" />
     @if (isWatched) {
-      <div class="watched-badge">
+      <div class="watched-badge" (click)="toggleWatched()">
         Vu
       </div>
     }
