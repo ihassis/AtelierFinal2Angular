@@ -1,0 +1,160 @@
+.movie-card {
+  width: 280px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Désactiver la carte quand le film est vu */
+.movie-card.watched {
+  pointer-events: none;
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Garder le badge "Vu" cliquable même quand la carte est désactivée */
+.movie-card.watched .watched-badge {
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.movie-poster-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+
+.movie-poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.watched-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(194, 54, 47, 0.95);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Effet au survol du badge */
+.watched-badge:hover {
+  background: rgba(194, 54, 47, 1);
+  transform: scale(1.05);
+}
+
+.movie-content {
+  padding: 20px;
+}
+
+.movie-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 12px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.movie-rating {
+  margin-bottom: 16px;
+}
+
+.star {
+  font-size: 20px;
+  color: #ffd700;
+  margin-right: 2px;
+  text-shadow: 0 0 3px rgba(255, 215, 0, 0.5);
+}
+
+.button-group {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.counter-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-counter {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  border: 2px solid #333;
+  background: #2a2a2a;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-counter:hover {
+  background: #3a3a3a;
+  border-color: #555;
+  transform: translateY(-2px);
+}
+
+.btn-counter:active {
+  transform: translateY(0);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.btn-action {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: 2px solid #333;
+  background: #2a2a2a;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+}
+
+.btn-view:hover {
+  background: #3a7bd5;
+  border-color: #3a7bd5;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-trash:hover {
+  background: #e74c3c;
+  border-color: #e74c3c;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-action:active {
+  transform: translateY(0);
+}
