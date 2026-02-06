@@ -1,5 +1,0 @@
-services:
-  angular-app:
-    build: .
-    image: angular-app-image-taniya
-    ports: [4001:8080]
